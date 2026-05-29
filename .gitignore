@@ -1,0 +1,28 @@
+# ─── 环境变量（含密码/密钥，绝不提交） ───
+.env
+.env.local
+.env.*.local
+
+# ─── Node.js ───
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── Next.js ───
+.next/
+out/
+
+# ─── 上传文件 ───
+my-world-server/uploads/videos/*.mp4
+my-world-server/uploads/videos/*.webm
+my-world-server/uploads/videos/*.mov
+
+# ─── 操作系统 ───
+.DS_Store
+Thumbs.db
+
+# ─── IDE ───
+.vscode/settings.json
+*.swp
+*.swo
