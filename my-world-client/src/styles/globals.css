@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+
+/* 定义动画关键帧 */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* 初始状态：完全透明 */
+  }
+  to {
+    opacity: 1; /* 结束状态：完全不透明 */
+  }
+}
+
+/* 封装成工具类，方便复用 */
+.fade-in {
+  /* 动画：动画名 时长 缓动 填充模式 */
+  animation: fadeIn 2s ease-out forwards;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* 👇 下面这一段是修复溢出的关键 👇 */
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  /* overflow-x: hidden; 禁止横向滚动 */
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

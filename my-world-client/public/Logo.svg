@@ -1,0 +1,63 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 定义渐变和滤镜 -->
+  <defs>
+    <!-- 主色调：蓝黑渐变 -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2463" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <!-- 高光色：亮蓝色 -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3e92cc" />
+      <stop offset="100%" stop-color="#0a2463" />
+    </linearGradient>
+    <!-- 金属拉丝纹理 -->
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a5568" />
+      <stop offset="5%" stop-color="#718096" />
+      <stop offset="10%" stop-color="#a0aec0" />
+      <stop offset="15%" stop-color="#cbd5e0" />
+      <stop offset="20%" stop-color="#a0aec0" />
+      <stop offset="25%" stop-color="#718096" />
+      <stop offset="30%" stop-color="#4a5568" />
+      <stop offset="35%" stop-color="#718096" />
+      <stop offset="40%" stop-color="#a0aec0" />
+      <stop offset="45%" stop-color="#cbd5e0" />
+      <stop offset="50%" stop-color="#a0aec0" />
+      <stop offset="55%" stop-color="#718096" />
+      <stop offset="60%" stop-color="#4a5568" />
+      <stop offset="65%" stop-color="#718096" />
+      <stop offset="70%" stop-color="#a0aec0" />
+      <stop offset="75%" stop-color="#cbd5e0" />
+      <stop offset="80%" stop-color="#a0aec0" />
+      <stop offset="85%" stop-color="#718096" />
+      <stop offset="90%" stop-color="#4a5568" />
+      <stop offset="95%" stop-color="#718096" />
+      <stop offset="100%" stop-color="#a0aec0" />
+    </linearGradient>
+    <!-- 立体效果滤镜 -->
+    <filter id="bevel" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur" />
+      <feSpecularLighting in="blur" surfaceScale="1" specularConstant="0.5" specularExponent="10" result="specOut" lighting-color="#ffffff">
+        <fePointLight x="50" y="50" z="30" />
+      </feSpecularLighting>
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+  </defs>
+
+  <!-- 背景圆形 - 已移除发光滤镜 -->
+  <circle cx="100" cy="100" r="90" fill="url(#mainGradient)" stroke="url(#accentGradient)" stroke-width="2" />
+
+  <!-- 内部圆环 -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="url(#accentGradient)" stroke-width="1" stroke-dasharray="4,2" />
+
+  <!-- 中心字母 'H' -->
+  <text x="100" y="115" font-family="'Orbitron', 'Arial Black', sans-serif" font-size="60" font-weight="900" text-anchor="middle" fill="url(#accentGradient)">H</text>
+
+  <!-- 元素编号 (79) -->
+  <text x="97" y="58" font-family="'Orbitron', sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#ff0000">79</text>
+  <text x="100" y="55" font-family="'Orbitron', sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="url(#accentGradient)">79</text>
+
+  <!-- 元素名称 (SOREN LU) -->
+  <text x="100" y="185" font-family="'Orbitron', sans-serif" font-size="20" font-weight="900" text-anchor="middle" fill="url(#metalGradient)">SOREN LU</text>
+</svg>
