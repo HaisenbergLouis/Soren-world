@@ -263,7 +263,7 @@ export default function Home() {
       </section>
 
       {/* ═══════ Quick Links ═══════ */}
-      <section className="min-h-screen bg-linear-to-b from-gray-900 to-black px-6 py-24 flex flex-col items-center justify-center">
+      <section className="min-h-screen bg-linear-to-b from-black to-gray-900 px-6 py-24 flex flex-col items-center justify-center">
         <div className="max-w-5xl mx-auto w-full">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">

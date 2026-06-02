@@ -163,11 +163,10 @@ export default function Work() {
             Get in Touch
           </Link>
         </div>
-
-        <div className="absolute bottom-10 text-gray-600 text-sm z-10">
-          <p>&copy; 2026 Soren Lu. All rights reserved.</p>
-        </div>
       </section>
+      <footer className="border-t border-white/5 py-8 text-center text-gray-600 text-sm">
+        <p>&copy; 2026 Soren Lu. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
